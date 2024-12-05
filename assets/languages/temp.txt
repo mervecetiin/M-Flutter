@@ -1,0 +1,2 @@
+//buraya dil yapıları
+//eğer kaç dil destekliyorsak.

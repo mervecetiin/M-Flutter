@@ -1,2 +1,3 @@
-# M-Flutter
-Istinye Univercity Student Projects.
+# flutter_app
+
+A new Flutter project.

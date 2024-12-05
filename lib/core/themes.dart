@@ -1,0 +1,1 @@
+//Burada temalandırma + renkler + ... yazıcaz.
