@@ -15,5 +15,6 @@ final router = GoRouter(
       path: '/home',
       builder: (context, state) => const HomeScreen(),
     ),
+    
   ],
 );

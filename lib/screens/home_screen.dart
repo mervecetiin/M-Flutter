@@ -11,11 +11,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // Uygulama çubuğu
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Artify',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 255, 255)),
         ),
-        backgroundColor: const Color.fromARGB(255, 170, 220, 255), // Hafif mavi ton
+        backgroundColor: const Color.fromARGB(255, 140, 11, 69), 
+        iconTheme: const IconThemeData(color: Colors.white),
+        actionsIconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.bell),
@@ -35,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 170, 220, 255),
+                color: const Color.fromARGB(255, 140, 11, 69),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                     child: Icon(
                       CupertinoIcons.person_circle,
                       size: 60,
-                      color: Color.fromARGB(255, 0, 51, 102),
+                      color: Color.fromARGB(255, 58, 63, 67),
                     ),
                   ),
                   SizedBox(height: 10),
@@ -96,20 +98,20 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 0, 51, 102),
+                color: Color.fromARGB(255, 82, 82, 82),
               ),
             ),
             const SizedBox(height: 10),
             const Text(
               'Sanat galerimizde en iyi eserleri keşfedin!',
-              style: TextStyle(fontSize: 16, color: Colors.black54),
+              style: TextStyle(fontSize: 16, color: Color.fromARGB(136, 97, 97, 97)),
             ),
             const SizedBox(height: 20),
 
             // Kategoriler
             const Text(
               'Kategoriler',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Color.fromARGB(255, 82, 82, 82),),
             ),
             const SizedBox(height: 10),
             Expanded(
@@ -122,25 +124,25 @@ class HomeScreen extends StatelessWidget {
                     context,
                     icon: CupertinoIcons.paintbrush,
                     title: 'Resim',
-                    color: Colors.blueAccent.shade100,
+                    color: const Color.fromARGB(255, 245, 103, 148),
                   ),
                   _buildCategoryCard(
                     context,
                     icon: CupertinoIcons.camera,
                     title: 'Fotoğraf',
-                    color: Colors.orangeAccent.shade100,
+                    color: const Color.fromARGB(255, 254, 191, 83),
                   ),
                   _buildCategoryCard(
                     context,
                     icon: CupertinoIcons.book,
                     title: 'Edebiyat',
-                    color: Colors.greenAccent.shade100,
+                    color: const Color.fromARGB(255, 90, 174, 223),
                   ),
                   _buildCategoryCard(
                     context,
                     icon: CupertinoIcons.music_note,
                     title: 'Müzik',
-                    color: Colors.purpleAccent.shade100,
+                    color: const Color.fromARGB(255, 93, 187, 117),
                   ),
                 ],
               ),
@@ -151,8 +153,9 @@ class HomeScreen extends StatelessWidget {
 
       // Alt navigasyon çubuğu
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 233, 244, 255),
-        selectedItemColor: const Color.fromARGB(255, 0, 102, 204),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        selectedItemColor:  const Color.fromARGB(255, 140, 11, 69),
+
         unselectedItemColor: const Color.fromARGB(135, 0, 0, 0),
         items: const [
           BottomNavigationBarItem(
