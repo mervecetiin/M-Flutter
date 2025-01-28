@@ -1,7 +1,10 @@
+import 'package:dotlottie_loader/dotlottie_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'profile_screen.dart';
-// Profil sayfasını oluşturduğumuz dosya
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import '../widgets/bottom_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,23 +12,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Uygulama çubuğu
+      // AppBar
       appBar: AppBar(
-        title: Text(
-          'Artify',
-          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 255, 255)),
-        ),
-        backgroundColor: const Color.fromARGB(255, 140, 11, 69), 
-        iconTheme: const IconThemeData(color: Colors.white),
-        actionsIconTheme: const IconThemeData(color: Colors.white),
+        title: const Text('Artify'),
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.bell),
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Bildirimler')),
-              );
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -37,7 +30,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: const Color.fromARGB(255, 140, 11, 69),
+                color: const Color.fromARGB(255, 140, 11, 69)
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     child: Icon(
                       CupertinoIcons.person_circle,
                       size: 60,
-                      color: Color.fromARGB(255, 58, 63, 67),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                   SizedBox(height: 10),
@@ -71,152 +64,55 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(CupertinoIcons.heart),
               title: const Text('Favoriler'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
-              leading: const Icon(CupertinoIcons.settings),
-              title: const Text('Ayarlar'),
-              onTap: () {},
+              leading: const Icon(CupertinoIcons.person),
+              title: const Text('Profil'),
+              onTap: () {
+                context.go("/Profil");
+              },
+              
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.info),
               title: const Text('Hakkında'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
       ),
+
 
       // Ana içerik
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Keşfetmek için hazır mısınız?',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 82, 82, 82),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              child:  SizedBox(
+                width: 200,
+                child: DotLottieLoader.fromAsset("assets/motions/home.lottie",
+                      frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
+                    if (dotlottie != null) {
+                      return Lottie.memory(dotlottie.animations.values.single);
+                    } else {
+                      return Container();
+                    }
+                  }),
               ),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'Sanat galerimizde en iyi eserleri keşfedin!',
-              style: TextStyle(fontSize: 16, color: Color.fromARGB(136, 97, 97, 97)),
-            ),
-            const SizedBox(height: 20),
-
-            // Kategoriler
-            const Text(
-              'Kategoriler',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Color.fromARGB(255, 82, 82, 82),),
-            ),
-            const SizedBox(height: 10),
-            Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                children: [
-                  _buildCategoryCard(
-                    context,
-                    icon: CupertinoIcons.paintbrush,
-                    title: 'Resim',
-                    color: const Color.fromARGB(255, 245, 103, 148),
-                  ),
-                  _buildCategoryCard(
-                    context,
-                    icon: CupertinoIcons.camera,
-                    title: 'Fotoğraf',
-                    color: const Color.fromARGB(255, 254, 191, 83),
-                  ),
-                  _buildCategoryCard(
-                    context,
-                    icon: CupertinoIcons.book,
-                    title: 'Edebiyat',
-                    color: const Color.fromARGB(255, 90, 174, 223),
-                  ),
-                  _buildCategoryCard(
-                    context,
-                    icon: CupertinoIcons.music_note,
-                    title: 'Müzik',
-                    color: const Color.fromARGB(255, 93, 187, 117),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
-      ),
-
-      // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        selectedItemColor:  const Color.fromARGB(255, 140, 11, 69),
-
-        unselectedItemColor: const Color.fromARGB(135, 0, 0, 0),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Keşfet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profil',
-          ),
         ],
-        onTap: (index) {
-          if (index == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ProfilePage()),
-            );
-          }
-        },
       ),
-    );
-  }
-
-  // Kategori kartları oluşturma fonksiyonu
-  Widget _buildCategoryCard(
-    BuildContext context, {
-    required IconData icon,
-    required String title,
-    required Color color,
-  }) {
-    return GestureDetector(
-      onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('$title kategorisine yönlendiriliyor...')),
-        );
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 50, color: Colors.white),
-            const SizedBox(height: 10),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
-      ),
+      // Alt navigasyon çubuğu
+      bottomNavigationBar: BottomMenu(),
+   
     );
   }
 }
+
