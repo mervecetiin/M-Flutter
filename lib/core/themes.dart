@@ -16,7 +16,7 @@ const colors = {
   "onPrimary": Colors.white,
   "secondary": Color.fromARGB(255, 250, 240, 245), // Daha açık pembe
   "onSecondary": Colors.black, // Yazılar için siyah
-  "surface": Color.fromARGB(255, 255, 255, 255), // Beyaz yüzey rengi
+  "surface": Color.fromARGB(255, 250, 240, 245), // Daha açık pembe
   "onSurface": Colors.black,
   "success": Color.fromARGB(255, 76, 175, 80), // Yeşil tonunda başarı
   "error": Color.fromARGB(255, 211, 47, 47), // Hata için kırmızı
