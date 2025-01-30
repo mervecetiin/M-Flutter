@@ -100,11 +100,11 @@ class HomeScreen extends StatelessWidget {
             ),*/
 
           ListTile(
-  leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.onError),
+  leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.onSecondary),
   title: Text(
     'Çıkış Yap',
     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-      color: Theme.of(context).colorScheme.onError, // Hata rengine uyumlu
+      color: Theme.of(context).colorScheme.onSecondary, // Hata rengine uyumlu
     ),
   ),
   onTap: () => context.go("/login"),
