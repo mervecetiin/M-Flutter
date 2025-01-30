@@ -12,28 +12,29 @@ class ThemeProvider with ChangeNotifier {
 }
 
 const colors = {
-  "primary": Color.fromARGB(255, 140, 11, 69), // Bordo ana renk
+  "primary": Color.fromARGB(255, 160, 40, 90), // Açıkça görülebilir bir pembe
   "onPrimary": Colors.white,
-  "secondary": Color.fromARGB(255, 240, 228, 233), // Açık pembe arka plan
+  "secondary": Color.fromARGB(255, 250, 240, 245), // Daha açık pembe
   "onSecondary": Colors.black, // Yazılar için siyah
-  "surface": Color.fromARGB(255, 240, 228, 233), // Genel yüzey rengi
+  "surface": Color.fromARGB(255, 255, 255, 255), // Beyaz yüzey rengi
   "onSurface": Colors.black,
-  "success": Colors.green,
-  "error": Colors.red,
+  "success": Color.fromARGB(255, 76, 175, 80), // Yeşil tonunda başarı
+  "error": Color.fromARGB(255, 211, 47, 47), // Hata için kırmızı
   "onError": Colors.white,
 };
 
 const darkColors = {
-  "primary": Color.fromARGB(255, 100, 0, 50), // Daha koyu bordo/mor
+  "primary": Color.fromARGB(255, 115, 20, 60), // Daha koyu pembe/mor
   "onPrimary": Colors.white,
-  "secondary": Color.fromARGB(255, 140, 11, 69), // Bordo tonu arka plan
+  "secondary": Color.fromARGB(255, 80, 20, 40), // Koyu pembe arka plan
   "onSecondary": Colors.white,
-  "surface": Color.fromARGB(255, 140, 11, 69), // Koyu pembe/bordo tonu
+  "surface": Color.fromARGB(255, 30, 30, 30), // Koyu gri yüzey
   "onSurface": Colors.white,
-  "success": Colors.green,
-  "error": Colors.red,
+  "success": Color.fromARGB(255, 76, 175, 80), // Yeşil tonunda başarı
+  "error": Color.fromARGB(255, 211, 47, 47), // Hata için kırmızı
   "onError": Colors.white,
 };
+
 
 final lightTheme = ThemeData(
   brightness: Brightness.light,
