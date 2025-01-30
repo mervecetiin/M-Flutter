@@ -120,7 +120,7 @@ lib/
 
 ## Ekran Görüntüleri
 
-[text]
+[![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.16.00.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.17.52.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.19.49.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.20.15.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.20.31.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.20.51.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.21.10.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.21.40.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.22.07.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.22.27.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.22.54.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.23.12.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.23.24.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.23.35.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.27.32.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.27.45.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.28.00.png>) ![](<assets/images/ekran görüntüleri/Ekran Resmi 2025-01-30 18.28.16.png>)]
 
   
 
