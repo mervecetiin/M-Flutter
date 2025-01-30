@@ -121,8 +121,7 @@ lib/
 ## Ekran Görüntüleri
 ![](<assets/images/Ekran Resmi 2025-01-30 18.16.00.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.17.52.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.19.49.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.20.15.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.20.31.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.20.51.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.21.10.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.21.40.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.22.07.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.22.27.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.22.54.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.23.12.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.23.24.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.23.35.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.27.32.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.27.45.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.28.00.png>) ![](<assets/images/Ekran Resmi 2025-01-30 18.28.16.png>)
 
-
-<!-- Failed to upload "Ekran Kaydı 2025-01-30 19.32.31.mov" -->
+https://github.com/user-attachments/assets/5632c7ba-1293-49f8-b801-2e6e54c740e2
   
 
 ## Projeye Katkı Sağlama
