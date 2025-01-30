@@ -4,7 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
+//import '../core/constants.dart';
+//import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
+//import '../widgets/suggested_action_card.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,16 +16,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        title: const Text('Artify'),
-        actions: [
-          IconButton(
-            icon: const Icon(CupertinoIcons.bell),
-            onPressed: () {},
-          ),
-        ],
+     // AppBar
+  appBar: AppBar(
+  title: const Text('Artify'),
+  actions: [
+    // Bell ikonunu kaldırıp yerine Sign In butonunu ekledim.
+    TextButton(
+      onPressed: () {
+        // Kullanıcı giriş işlemi için buraya tıklayacak.
+        context.go("/login"); // Login ekranına yönlendirme
+      },
+      child: const Text(
+        'Sign In',
+        style: TextStyle(
+          color: Color.fromARGB(255, 0, 0, 0), // Yazı rengini beyaz yaptım
+          fontWeight: FontWeight.bold, // Yazıyı belirginleştirdim
+        ),
       ),
+    ),
+  ],
+),
 
       // Yan menü (Drawer)
       drawer: Drawer(
@@ -30,7 +44,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: const Color.fromARGB(255, 140, 11, 69)
+                color: Color.fromARGB(255, 140, 11, 69),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -64,55 +78,69 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(CupertinoIcons.heart),
               title: const Text('Favoriler'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => context.push("/favoriler")
             ),
-            ListTile(
+            /*ListTile(
               leading: const Icon(CupertinoIcons.person),
               title: const Text('Profil'),
-              onTap: () {
-                context.go("/Profil");
-              },
-              
-            ),
+              onTap: () => context.push("/profile")
+            ),*/
             ListTile(
-              leading: const Icon(CupertinoIcons.info),
-              title: const Text('Hakkında'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              leading: const Icon(CupertinoIcons.settings),
+              title: const Text('Ayarlar'),
+              onTap: () => context.push("/settings"),
+            ),
+
+            //const Spacer(),
+            const Padding(
+             padding: EdgeInsets.only(top: 385), // Butonu aşağı iter
+              ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Çıkış Yap'),
+              onTap: () => context.go("/login"),
             ),
           ],
         ),
       ),
 
-
       // Ana içerik
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              child:  SizedBox(
-                width: 200,
-                child: DotLottieLoader.fromAsset("assets/motions/home.lottie",
-                      frameBuilder: (BuildContext ctx, DotLottie? dotlottie) {
-                    if (dotlottie != null) {
-                      return Lottie.memory(dotlottie.animations.values.single);
-                    } else {
-                      return Container();
-                    }
-                  }),
+      body: SafeArea(
+  child: Column(
+    children: [
+      Expanded(
+        flex: 2,
+        child: Container(
+          // Animasyonu küçültmek ve üst orta kısmına yerleştirmek için Center widget'ı ve boyutlandırma eklendi.
+          alignment: Alignment.topCenter, // Üst orta konuma yerleştirme
+          padding: const EdgeInsets.only(top: 24), // Üstten boşluk bırakmak için padding
+          child: SizedBox(
+            width: 200, // Genişlik ayarı (ne çok büyük ne de çok küçük)
+            height: 200, // Yükseklik ayarı
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: DotLottieLoader.fromAsset(
+                "assets/motions/home.lottie",
+                frameBuilder: (context, dotlottie) {
+                  if (dotlottie != null) {
+                    return Lottie.memory(
+                      dotlottie.animations.values.single,
+                    );
+                  }
+                  return const SizedBox();
+                },
               ),
+            ),
           ),
         ),
-        ],
       ),
+    ],
+  ),
+),
+
       // Alt navigasyon çubuğu
       bottomNavigationBar: BottomMenu(),
-   
     );
   }
 }
-

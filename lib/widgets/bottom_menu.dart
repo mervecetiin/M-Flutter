@@ -31,7 +31,24 @@ class BottomMenu extends StatelessWidget {
           CupertinoIcons.search
           ),
           ),
+          IconButton(onPressed: () {
+    
+          context.go("/yeni-eser");
+        },
+         icon: Icon(
+          CupertinoIcons.plus
+          ),
+          ),
          
+
+        IconButton(onPressed: () {
+    
+          context.go("/Eserlerim");
+        },
+         icon: Icon(
+          CupertinoIcons.paintbrush
+          ),
+          ),
         IconButton(onPressed: () {
     
           context.go("/Profil");
@@ -40,6 +57,7 @@ class BottomMenu extends StatelessWidget {
           CupertinoIcons.person
           ),
           ),
+
         ],
       ),
     );
