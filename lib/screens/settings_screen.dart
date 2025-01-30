@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 
-//import '../core/themes.dart';
+import '../core/themes.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -25,7 +25,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             trailing: Switch(
               value: Theme.of(context).brightness == Brightness.dark,
               onChanged: (value) {
-                //context.read<ThemeProvider>().toggleTheme();
+                context.read<ThemeProvider>().toggleTheme();
               },
             ),
           ),

@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(CupertinoIcons.app),
+            icon: Icon(CupertinoIcons.moon),
             onPressed: () {
               context.read<ThemeProvider>().toggleTheme(); // Tema değiştirici eklendi
             },
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
             child: Text(
               'Sign In',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onPrimary,
+                color: Theme.of(context).colorScheme.onSecondary,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -92,12 +92,25 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 385),
             ),
-            Divider(),
+            /*Divider(),
             ListTile(
               leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.onError),
               title: Text('Çıkış Yap', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onError)),
               onTap: () => context.go("/login"),
-            ),
+            ),*/
+
+          ListTile(
+  leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.onError),
+  title: Text(
+    'Çıkış Yap',
+    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+      color: Theme.of(context).colorScheme.onError, // Hata rengine uyumlu
+    ),
+  ),
+  onTap: () => context.go("/login"),
+),
+
+
           ],
         ),
       ),
