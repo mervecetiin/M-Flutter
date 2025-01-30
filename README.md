@@ -120,7 +120,7 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
+[<assets/images/ekran görüntüleri>]
 
   
 
