@@ -1,14 +1,6 @@
-//Burada temalandırma + renkler + ... yazıcaz.
-
-
-// burada temalandirma + renkler + ... yazicaz.
-
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// import 'constants.dart';
-
-// theme_provider.dart
 class ThemeProvider with ChangeNotifier {
   bool _isDark = false;
   bool get isDark => _isDark;
@@ -20,24 +12,24 @@ class ThemeProvider with ChangeNotifier {
 }
 
 const colors = {
-  "primary": Color.fromARGB(255, 65, 159, 217),
-  "onPrimary": Color.fromARGB(255, 255, 255, 255),
-  "secondary": Color.fromARGB(255, 241, 241, 241),
-  "onSecondary": Color.fromARGB(255, 82, 76, 100),
-  "surface": Color.fromARGB(255, 255, 255, 255),
-  "onSurface": Color.fromARGB(255, 82, 76, 100),
+  "primary": Color.fromARGB(255, 140, 11, 69), // Bordo ana renk
+  "onPrimary": Colors.white,
+  "secondary": Color.fromARGB(255, 240, 228, 233), // Açık pembe arka plan
+  "onSecondary": Colors.black, // Yazılar için siyah
+  "surface": Color.fromARGB(255, 240, 228, 233), // Genel yüzey rengi
+  "onSurface": Colors.black,
   "success": Colors.green,
   "error": Colors.red,
   "onError": Colors.white,
 };
 
 const darkColors = {
-  "primary": Color.fromARGB(255, 43, 82, 120),
-  "onPrimary": Color.fromARGB(255, 241, 241, 241),
-  "secondary": Color.fromARGB(255, 32, 43, 54),
-  "onSecondary": Color.fromARGB(255, 241, 241, 241),
-  "surface": Color.fromARGB(255, 23, 33, 43),
-  "onSurface": Color.fromARGB(255, 245, 245, 245),
+  "primary": Color.fromARGB(255, 100, 0, 50), // Daha koyu bordo/mor
+  "onPrimary": Colors.white,
+  "secondary": Color.fromARGB(255, 140, 11, 69), // Bordo tonu arka plan
+  "onSecondary": Colors.white,
+  "surface": Color.fromARGB(255, 140, 11, 69), // Koyu pembe/bordo tonu
+  "onSurface": Colors.white,
   "success": Colors.green,
   "error": Colors.red,
   "onError": Colors.white,
@@ -55,5 +47,54 @@ final lightTheme = ThemeData(
     onError: colors["onError"]!,
     surface: colors["surface"]!,
     onSurface: colors["onSurface"]!,
-)
+  ),
+  textTheme: TextTheme(
+    bodySmall: GoogleFonts.roboto(),
+    bodyMedium: GoogleFonts.roboto(),
+    bodyLarge: GoogleFonts.roboto(),
+    labelSmall: GoogleFonts.roboto(),
+    labelMedium: GoogleFonts.roboto(),
+    labelLarge: GoogleFonts.roboto(),
+    titleSmall: GoogleFonts.roboto(),
+    titleMedium: GoogleFonts.roboto(),
+    titleLarge: GoogleFonts.roboto(),
+    headlineSmall: GoogleFonts.aBeeZee(),
+    headlineMedium: GoogleFonts.aBeeZee(),
+    headlineLarge: GoogleFonts.aBeeZee(),
+    displaySmall: GoogleFonts.abrilFatface(),
+    displayMedium: GoogleFonts.abrilFatface(),
+    displayLarge: GoogleFonts.abrilFatface(),
+  ),
+);
+
+final darkTheme = ThemeData(
+  brightness: Brightness.dark,
+  colorScheme: ColorScheme(
+    brightness: Brightness.dark,
+    primary: darkColors["primary"]!,
+    onPrimary: darkColors["onPrimary"]!,
+    secondary: darkColors["secondary"]!,
+    onSecondary: darkColors["onSecondary"]!,
+    error: darkColors["error"]!,
+    onError: darkColors["onError"]!,
+    surface: darkColors["surface"]!,
+    onSurface: darkColors["onSurface"]!,
+  ),
+  textTheme: TextTheme(
+    bodySmall: GoogleFonts.roboto(),
+    bodyMedium: GoogleFonts.roboto(),
+    bodyLarge: GoogleFonts.roboto(),
+    labelSmall: GoogleFonts.roboto(),
+    labelMedium: GoogleFonts.roboto(),
+    labelLarge: GoogleFonts.roboto(),
+    titleSmall: GoogleFonts.roboto(),
+    titleMedium: GoogleFonts.roboto(),
+    titleLarge: GoogleFonts.roboto(),
+    headlineSmall: GoogleFonts.aBeeZee(),
+    headlineMedium: GoogleFonts.aBeeZee(),
+    headlineLarge: GoogleFonts.aBeeZee(),
+    displaySmall: GoogleFonts.abrilFatface(),
+    displayMedium: GoogleFonts.abrilFatface(),
+    displayLarge: GoogleFonts.abrilFatface(),
+  ),
 );

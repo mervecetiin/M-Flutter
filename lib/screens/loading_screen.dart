@@ -7,6 +7,9 @@ import 'package:flutter_app/core/routes.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
+import '../core/constants.dart';
+
+
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
 

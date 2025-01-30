@@ -4,10 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
-//import '../core/constants.dart';
-//import '../core/themes.dart';
+import '../core/constants.dart';
+import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
-//import '../widgets/suggested_action_card.dart';
+import '../widgets/suggested_action_card.dart';
 
 
 class HomeScreen extends StatelessWidget {
